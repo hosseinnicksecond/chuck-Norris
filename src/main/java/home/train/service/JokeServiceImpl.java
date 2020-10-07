@@ -1,13 +1,16 @@
 package home.train.service;
 
 import guru.springframework.norris.chuck.ChuckNorrisQuotes;
+import org.springframework.stereotype.Service;
 
+@Service
 public class JokeServiceImpl implements JokeService{
 
-    private final guru.springframework.norris.chuck.ChuckNorrisQuotes joke;
+    private final ChuckNorrisQuotes joke;
 
-    public JokeServiceImpl(ChuckNorrisQuotes joke) {
-        this.joke = joke;
+
+    public JokeServiceImpl() {
+        this.joke = new ChuckNorrisQuotes();
     }
 
     @Override
